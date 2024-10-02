@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transactions Tracker</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="transactions__container">
+      <h1 class="transactions__main-title">لیست تراکنش ها</h1>
+      <div class="transactions__load">
+        <button class="load-Btn">بارگذاری تراکنش ها</button>
+      </div>
+      <div class="transactions__display hidden">
+        <div class="transactions__search">
+          <i class="fas fa-search"></i>
+          <input
+            id="search-input"
+            type="search"
+            name="search"
+            placeholder="جستجو تراکنش..."
+            size="30"
+          />
+        </div>
+        <div class="transactions__list">
+          <h2 class="transactions__sub-title">لیست تراکنش های شما</h2>
+          <table class="transactions__table">
+            <thead>
+              <tr>
+                <th>ردیف</th>
+                <th>نوع تراکنش</th>
+                <th>
+                  مبلغ <i class="sort__price-btn fa-solid fa-chevron-down"></i>
+                </th>
+                <th>شماره پیگیری</th>
+                <th>
+                  تاریخ تراکنش
+                  <i class="sort__date-btn fa-solid fa-chevron-down"></i>
+                </th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>

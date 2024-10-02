@@ -1,0 +1,202 @@
+@import url("./fonts.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  outline: none;
+}
+
+:root {
+  --color-secondary-900: rgb(17, 24, 39);
+  --color-secondary-800: rgb(31, 41, 55);
+  --color-secondary-700: rgb(55, 65, 81);
+  --color-secondary-600: rgb(75, 85, 99);
+  --color-secondary-500: rgb(107, 114, 128);
+  --color-secondary-400: rgb(156, 163, 175);
+  --color-secondary-300: rgb(209, 213, 219);
+  --color-secondary-200: rgb(229, 231, 235);
+  --color-secondary-100: rgb(243, 244, 246);
+  --color-secondary-50: rgb(249, 250, 251);
+  --color-secondary-0: rgb(255, 255, 255);
+
+  --color-primary-900: rgb(77, 112, 255);
+  --color-primary-800: rgb(92, 124, 255);
+  --color-primary-700: rgb(92, 124, 255);
+  --color-primary-600: rgb(128, 153, 255);
+  --color-primary-500: rgb(146, 167, 255);
+  --color-primary-400: rgb(164, 182, 255);
+  --color-primary-300: rgb(183, 197, 255);
+  --color-primary-200: rgb(201, 211, 255);
+  --color-primary-100: rgb(219, 226, 255);
+  --color-primary-50: rgb(228, 233, 255);
+
+  --border-radius-tiny: 3px;
+  --border-radius-sm: 5px;
+  --border-radius-md: 7px;
+  --border-radius-lg: 9px;
+
+  --color-success: rgb(0, 192, 115);
+  --color-warning: rgb(255, 153, 0);
+  --color-error: rgb(255, 71, 87);
+  --color-red-700: rgb(185, 28, 28);
+  --color-red-800: rgb(153, 27, 27);
+  --color-red-500: rgb(239, 68, 68);
+  --color-red-300: rgb(252, 165, 165);
+  --color-red-100: rgb(254, 226, 226);
+}
+
+body {
+  background-color: var(--color-secondary-100);
+  font-family: Vazirmatn, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.transactions__container {
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.transactions__main-title {
+  margin-top: 5rem;
+  color: var(--color-secondary-500);
+}
+
+.transactions__load {
+  margin-top: 8rem;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+.load-Btn {
+  align-self: center;
+  padding: 2rem 5rem;
+  border-radius: var(--border-radius-lg);
+  background-color: var(--color-primary-900);
+  color: var(--color-primary-50);
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: Vazirmatn;
+  border: none;
+}
+
+.transactions__display {
+  /* margin: 2rem auto; */
+  margin-top: 2rem;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+.transactions__search {
+  align-self: flex-end;
+  position: relative;
+  width: 250px;
+}
+
+.transactions__search i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: var(--color-secondary-400);
+  font-size: 1.75rem;
+}
+
+.transactions__search input {
+  border-radius: var(--border-radius-lg);
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border: 1px solid #ccc;
+  font-size: 1.5rem;
+  font-family: vazirmatn;
+}
+
+input::placeholder {
+  color: var(--color-secondary-400);
+}
+
+input:hover {
+  border: none;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.transactions__list {
+  margin-top: 2rem;
+  background-color: #fff;
+  padding: 5rem 3rem;
+  border-radius: var(--border-radius-lg);
+}
+
+.transactions__sub-title {
+  margin-bottom: 2rem;
+  color: var(--color-secondary-400);
+}
+
+.transactions__table {
+  width: 100%;
+  border: 1px solid var(--color-secondary-300);
+  border-radius: var(--border-radius-lg);
+  border-spacing: 0pt;
+  border-collapse: separate;
+}
+
+.transactions__table th,
+.transactions__table td {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.transactions__table th {
+  background-color: var(--color-secondary-100);
+}
+
+.transactions__table tr:not(:last-child) td {
+  border-bottom: 1px solid var(--color-secondary-300);
+}
+
+table tr:first-child th:first-child,
+table tr:first-child td:first-child {
+  border-top-right-radius: var(--border-radius-lg);
+}
+
+table tr:first-child th:last-child,
+table tr:first-child td:last-child {
+  border-top-left-radius: var(--border-radius-lg);
+}
+
+.transactions__table td.type-green {
+  color: var(--color-success);
+}
+
+.transactions__table td.type-red {
+  color: var(--color-error);
+}
+
+.fa-solid {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.sort__price-btn,
+.sort__date-btn {
+  transition: transform 0.3s ease;
+}
+
+.rotated {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.hidden {
+  display: none;
+}
